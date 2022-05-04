@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}Real Estate Tool{% endblock %}
+
+{% block content %}
+	<div style="width:90%; background-color: darkgrey; margin: auto; margin-top: 20px; border: 2px black; border-style:solid; height: 400px; padding: 10px;">
+		<h4 align="center" style="color: ghostwhite; text-shadow: 1px 1px black; background-color:darkslateblue; height: 50px; margin: -10px; margin-bottom: 0px; border: 1px black; border-bottom: 3px black; border-style: solid;"> Property Value Calculator</h4>
+		<div style="margin: 0px 0px 0px 10px; border-right: 2px solid black; width: 320px; height: 92%;">
+			<form method="POST">
+				<div class="form-group">
+				    <label for="email" style="font-size: 18px;">Property Age</label>
+				    <input type="email" class="form-control" id="email" style="width:150px;">
+			    </div>
+				<div class="form-group">
+				    <label for="pwd" style="font-size:18px;">Distance to MRT station</label>
+				    <input type="password" class="form-control" id="pwd" style="width:150px;">
+			    </div>
+			    <div class="form-group">
+				    <label for="pwd" style="font-size: 18px;">Number of Nearby Convenience Stores</label>
+				    <input type="password" class="form-control" id="pwd" style="width:150px;">
+			    </div>
+			    <button type="submit" class="btn btn-primary" style="background-color: darkslategray; border: none; width: auto; margin: 10px 10px 0px 15px;">Calculate Price</button>	
+
+			</form>
+		</div>
+	</div>
+
+{% endblock %}
