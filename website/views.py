@@ -1,4 +1,4 @@
-#Blueprint file defines all routes (URLs) for site 
+#Blueprint file: routes (URLs) for site 
 from flask import Blueprint, render_template, request, flash, jsonify
 from website.regression import ridge_pred
 import numpy as np 
@@ -8,6 +8,7 @@ views = Blueprint('views', __name__)
 
 @views.route('/', methods=['GET', 'POST'])
 
+#On button click (POST request), reads user input and generates prediction
 def index():
 	prediction = 0
 	if request.method == 'POST':
@@ -22,6 +23,6 @@ def index():
 		prediction = ridge_pred(usr_input)
 		prediction = round(prediction[0], 2)
 
-	return render_template("index.html", prediction = prediction)
+	return render_template("index.html", prediction = prediction) #updates front end
 
 
